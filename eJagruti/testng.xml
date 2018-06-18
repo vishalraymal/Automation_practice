@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+	<suite name="Suite">
+	
+	<parameter name= "include" value="001"></parameter>	
+	
+	<listeners>
+	<listener class-name="ejagruti.finsys.listners.TestCaseListners"></listener>
+	<listener class-name="ejagruti.finsys.listners.SuitListners"></listener>
+	<listener class-name="ejagruti.finsys.reporting.HTMLReportGenerator"></listener>
+	</listeners>
+	
+
+	<test name="Verify login functionality by passing valid username and password">
+	<parameter name="aid" value="1"></parameter>
+	<parameter name="tcid" value="001"></parameter>
+    <parameter name="req_id" value="R-101"></parameter>
+     <parameter name="owner" value="Vishal"></parameter>
+     <parameter name="Excuted" value="Excuted"></parameter>
+	<parameter name="bName" value="ch"></parameter>
+	<parameter name="url" value="http://localhost:90/finsys"></parameter>
+	<parameter name="driverpath" value="C:\\Users\\Vishal-PC\\Downloads\\chromedriver.exe"></parameter>
+	<parameter name="uName" value="dummyfm"></parameter>
+	<parameter name="pWord" value="passw0rd"></parameter>
+	<classes>
+	<class name="ejagruti.finsys.modules.ApplicationLaunching">
+	<methods>
+		<include name="SelectBrowser"></include>
+	</methods>	
+	</class>
+	<class name="ejagruti.finsys.modules.Login">
+	<methods>
+		<include name="doLogin"></include>
+	</methods>
+	</class>
+	</classes>
+	</test>
+	
+	<test name="Verify Creation of a New Company by passing all Valid Details">
+	<parameter name="tcid" value="002"></parameter>
+    <parameter name="req_id" value="R-101"></parameter>
+    <parameter name="owner" value="Vishal"></parameter>
+    <parameter name="Excuted" value="TestExcuted"></parameter>
+    <parameter name="UserName" value="VishalR"></parameter>
+	<parameter name="bName" value="ch"></parameter>
+	<parameter name="url" value="http://localhost:90/finsys"></parameter>
+	<parameter name="driverpath" value="C:\\Users\\Vishal-PC\\Downloads\\chromedriver.exe"></parameter>
+	<parameter name="uName" value="dummyfm"></parameter>
+	<parameter name="pWord" value="passw0rd"></parameter>
+	<parameter name="comName" value="Devandand pvt ltd"></parameter>
+	<parameter name="comType" value="IT"></parameter>
+	<parameter name="comSubType" value="Service"></parameter>
+	<parameter name="Add" value="B-CABIN"></parameter>
+	<parameter name="phNo" value="7208751589"></parameter>
+	<parameter name="eMail" value="sachinsose@gmail.com"></parameter>
+	<parameter name="panNo" value="BQGPRGGHHH"></parameter>
+	<parameter name="TinNo" value="7246454565"></parameter>
+	<parameter name="moNo" value="7528588825"></parameter>
+	<parameter name="wSite" value="www.fb.com"></parameter>
+	<parameter name="seConty" value="IN"></parameter>
+	<parameter name="seState" value="ANDHRA PRADESH"></parameter>
+	<parameter name="compName" value="HYDERABAD"></parameter>
+	<parameter name="noEmp" value="200"></parameter>
+
+	<classes>
+	<class name="ejagruti.finsys.modules.ApplicationLaunching">
+	<methods>
+		<include name="SelectBrowser"></include>
+	</methods>	
+	</class>
+	<class name="ejagruti.finsys.modules.Login">
+	<methods>
+		<include name="doLogin"></include>
+	</methods>
+	</class>
+	<class name="ejagruti.finsys.modules.CreateNewCompany">
+	<methods>
+		<include name="CreateNewCompany"></include>
+	</methods>
+	</class>
+	</classes>
+	</test>
+   </suite>

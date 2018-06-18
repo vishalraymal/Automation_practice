@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <parameter name="include" value="001"/>
+  <listeners>
+    <listener class-name="ejagruti.finsys.listners.TestCaseListners"/>
+    <listener class-name="ejagruti.finsys.listners.SuitListners"/>
+    <listener class-name="ejagruti.finsys.reporting.HTMLReportGenerator"/>
+  </listeners>
+  <test name="Verify Creation of a New Company by passing all Valid Details(failed)">
+    <parameter name="owner" value="Vishal"/>
+    <parameter name="Add" value="B-CABIN"/>
+    <parameter name="comType" value="IT"/>
+    <parameter name="UserName" value="VishalR"/>
+    <parameter name="bName" value="ch"/>
+    <parameter name="panNo" value="BQGPRGGHHH"/>
+    <parameter name="noEmp" value="200"/>
+    <parameter name="pWord" value="passw0rd"/>
+    <parameter name="wSite" value="www.fb.com"/>
+    <parameter name="TinNo" value="7246454565"/>
+    <parameter name="phNo" value="7208751589"/>
+    <parameter name="compName" value="HYDERABAD"/>
+    <parameter name="url" value="http://localhost:90/finsys"/>
+    <parameter name="eMail" value="sachinsose@gmail.com"/>
+    <parameter name="req_id" value="R-101"/>
+    <parameter name="moNo" value="7528588825"/>
+    <parameter name="seState" value="ANDHRA PRADESH"/>
+    <parameter name="Excuted" value="TestExcuted"/>
+    <parameter name="driverpath" value="C:\\Users\\Vishal-PC\\Downloads\\chromedriver.exe"/>
+    <parameter name="uName" value="dummyfm"/>
+    <parameter name="comSubType" value="Service"/>
+    <parameter name="comName" value="Devandand pvt ltd"/>
+    <parameter name="tcid" value="002"/>
+    <parameter name="seConty" value="IN"/>
+    <classes>
+      <class name="ejagruti.finsys.modules.ApplicationLaunching">
+        <methods>
+          <include name="SelectBrowser" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- ejagruti.finsys.modules.ApplicationLaunching -->
+      <class name="ejagruti.finsys.modules.Login">
+        <methods>
+          <include name="doLogin" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- ejagruti.finsys.modules.Login -->
+    </classes>
+  </test> <!-- Verify Creation of a New Company by passing all Valid Details(failed) -->
+</suite> <!-- Failed suite [Suite] -->

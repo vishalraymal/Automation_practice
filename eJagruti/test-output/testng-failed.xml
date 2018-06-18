@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="include" value="001"/>
+  <listeners>
+    <listener class-name="ejagruti.finsys.listners.TestCaseListners"/>
+    <listener class-name="ejagruti.finsys.listners.SuitListners"/>
+    <listener class-name="ejagruti.finsys.reporting.HTMLReportGenerator"/>
+  </listeners>
+  <test name="Verify login functionality by passing valid username and password(failed)">
+    <parameter name="req_id" value="R-101"/>
+    <parameter name="owner" value="Vishal"/>
+    <parameter name="Excuted" value="Excuted"/>
+    <parameter name="bName" value="ch"/>
+    <parameter name="driverpath" value="C:\\Users\\Vishal-PC\\Downloads\\chromedriver.exe"/>
+    <parameter name="uName" value="dummyfm"/>
+    <parameter name="pWord" value="passw0rd"/>
+    <parameter name="tcid" value="001"/>
+    <parameter name="aid" value="1"/>
+    <parameter name="url" value="http://localhost:90/finsys"/>
+    <classes>
+      <class name="ejagruti.finsys.modules.Login">
+        <methods>
+          <include name="doLogin" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- ejagruti.finsys.modules.Login -->
+    </classes>
+  </test> <!-- Verify login functionality by passing valid username and password(failed) -->
+</suite> <!-- Failed suite [Suite] -->
